@@ -2,28 +2,26 @@
 start_session();
 if(isset($_SESSION["views"]))
 {
-  $_SESSION['views'] = $_SESSION['views'] + 1;
-  header('/var/www/html/cs313/results.php');
+  //$_SESSION['views'] = $_SESSION['views'] + 1;
+  //header('/var/www/html/results.php');
 }
 else
 {
-  $_SESSION['views'] = 1;
+  //$_SESSION['views'] = 1;
 }
-
-
 ?>
 
 <!DOCTYPE html>
 <html>
   <head>
-    <?php $head = file_get_contents('/var/www/html/cs313/modules/head.html');
+    <?php $head = file_get_contents('/var/www/html/modules/head.html');
     echo $head;
     ?>
   </head>
 
   <body>
     <div id="navigation">
-      <?php $nav = file_get_contents('/var/www/html/cs313/modules/navigation.html');
+      <?php $nav = file_get_contents('/var/www/html/modules/navigation.html');
       echo $nav;
       ?>
     </div>
@@ -71,7 +69,7 @@ else
   </body>
 
   <footer>
-    <?php $foot = file_get_contents('/var/www/html/cs313/modules/footer.html');
+    <?php $foot = file_get_contents('/var/www/html/modules/footer.html');
     echo $foot;
     ?>
   </footer>
