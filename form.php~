@@ -1,0 +1,72 @@
+<?php
+setcookie("user", "cookieMonster", time() + 600);
+?>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <?php $head = file_get_contents('/var/www/html/cs313/modules/head.html');
+    echo $head;
+    ?>
+  </head>
+
+  <body>
+    <div id="navigation">
+      <?php $nav = file_get_contents('/var/www/html/cs313/modules/navigation.html');
+      echo $nav;
+      ?>
+    </div>
+
+    <form name="input" action="action.php" method="get">
+      First Name: <input type="text" name="firstname"><br/>
+      Last Name: <input type="text" name="lastname"><br/>
+      If you could have any one of the following super powers, what would it be? <br/>
+      <input type="radio" name="power" value="Flight">Fly<br/>
+      <input type="radio" name="power" value="Invisibility">Invisible<br/>
+      <input type="radio" name="power" value="Teleportation">Teleportation<br/>
+      <input type="radio" name="power" value="Time Travel">Time Travel<br/>
+      <input type="radio" name="power" value="Super Speed">Super Speed<br/>
+      <input type="radio" name="power" value="Super Strength">Super Strength<br/>
+      How many older siblings do you have?
+      <select name="oldersiblings">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      How many younger siblings do you have?
+      <select name="youngersiblings">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+
+      <input type="submit" value="Submit">
+    </form>
+
+    <?php
+    echo $_COOKIE["user"];
+    ?>
+
+
+  </body>
+
+  <footer>
+    <?php $foot = file_get_contents('/var/www/html/cs313/modules/footer.html');
+    echo $foot;
+    ?>
+  </footer>
+</html>
