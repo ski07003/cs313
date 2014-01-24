@@ -1,13 +1,13 @@
 <?php
-start_session();
+session_start();
 if(isset($_SESSION["views"]))
 {
-  //$_SESSION['views'] = $_SESSION['views'] + 1;
-  //header('/var/www/html/results.php');
+  $_SESSION['views'] = $_SESSION['views'] + 1;
+  //header('Location: results.php');
 }
 else
 {
-  //$_SESSION['views'] = 1;
+  $_SESSION['views'] = 1;
 }
 ?>
 
@@ -23,10 +23,13 @@ else
     <div id="navigation">
       <?php $nav = file_get_contents('/var/www/html/modules/navigation.html');
       echo $nav;
+
+      echo "Views=". $_SESSION['views'];
+
       ?>
     </div>
 
-    <form name="input" action="action.php" method="get">
+    <form name="input" action="results.php" method="get">
       First Name: <input type="text" name="firstname"><br/>
       Last Name: <input type="text" name="lastname"><br/>
       If you could have any one of the following super powers, what would it be? <br/>
@@ -60,10 +63,6 @@ else
 
       <input type="submit" value="Submit">
     </form>
-
-    <?php
-    echo $_COOKIE["user"];
-    ?>
 
 
   </body>
