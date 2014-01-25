@@ -3,7 +3,7 @@ session_start();
 if(isset($_SESSION["views"]))
 {
   $_SESSION['views'] = $_SESSION['views'] + 1;
-  //header('Location: results.php');
+//  header('Location: results.php');
 }
 else
 {
@@ -24,14 +24,13 @@ else
       <?php $nav = file_get_contents('/var/www/html/modules/navigation.html');
       echo $nav;
 
-      echo "Views=". $_SESSION['views'];
+      //echo "Views=". $_SESSION['views'];
 
       ?>
+    <h2>Survey:</h2>
     </div>
 
     <form name="input" action="results.php" method="get">
-      First Name: <input type="text" name="firstname"><br/>
-      Last Name: <input type="text" name="lastname"><br/>
       If you could have any one of the following super powers, what would it be? <br/>
       <input type="radio" name="power" value="Flight">Fly<br/>
       <input type="radio" name="power" value="Invisibility">Invisible<br/>

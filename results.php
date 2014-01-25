@@ -1,7 +1,18 @@
-<?php 
-$results = file_get_contents("results.json");
-$decoded = json_decode($results, true);
+<?php
+//$dir = 'json';
+//if (!file_exists('results.php'))
+//{
+ //mkdir ($dir, 0777);
+//  $results = file_get_contents("2results.json");
+//}
+//else
+//{
+//  $results = file_get_contents("results.json");
+//}
 
+$results = file_get_contents("json/results.json");
+$decoded = json_decode($results, true);
+//echo $results;
 
 if (empty($_GET))
 {
@@ -16,8 +27,9 @@ else
   
   $encode = json_encode($decoded);
 
-  file_put_contents('results.json.test', $encode);
-  file_put_contents('results.json', $decoded);
+// echo $encode;
+ file_put_contents('json/results.json', $encode);
+//  file_put_contents('1results.json', $decoded);
 }
 
 
@@ -42,10 +54,8 @@ $flP = $decoded['flavor']['Pink'];
 $flY = $decoded['flavor']['Yellow'];
 $flO = $decoded['flavor']['Orange'];
 
-$fightGan $decoded['fight']['Gandalf'];
-$fightDum $decoded['fight']['Dumbledore'];
-
-
+$fightGan = $decoded['fight']['Gandalf'];
+$fightDum = $decoded['fight']['Dumbledore'];
 
 ?>
 
@@ -56,8 +66,9 @@ $fightDum $decoded['fight']['Dumbledore'];
   </head>
 
   <body>
-    <h2>Survey Results</h2>
 
+    <h1>Thank You for Your Time</h1>
+    <h2>Survey Results</h2>
     <h3>Super Powers</h3>
     <table border="1">
       <tr>
@@ -162,11 +173,11 @@ $fightDum $decoded['fight']['Dumbledore'];
       </tr>
       <tr>
         <td>DumbleDore</td>
-        <td><?php echo $fightGan;?></td>
+        <td><?php echo $fightDum;?></td>
       </tr>
       <tr>
         <td>Gandalf</td>
-        <td><?php echo $fightDum;?></td>
+        <td><?php echo $fightGan;?></td>
       </tr>
     </table>    
   </body>
