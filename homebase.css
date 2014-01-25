@@ -32,3 +32,32 @@ object
 {
     float:right;
 }
+
+#navigation ul
+{
+   list-style-type:none;
+   margin:0;
+   padding:0;
+   overflow:hidden;
+}
+
+#navigation li
+{
+    float:left;
+}
+
+#navigation a:link, a:visited
+{
+   display:block;
+   width:120px;
+   font-weight:bold;
+   color:BLACK;
+   text-align:center;
+   padding:4px;
+   text-decoration:none;
+   text-transform:uppercase;
+}
+#navigation a:hover, a:active
+{
+   background-color: RED;
+}

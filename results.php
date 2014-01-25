@@ -63,9 +63,15 @@ $fightDum = $decoded['fight']['Dumbledore'];
 <html>
 
   <head>
+     <?php $head = file_get_contents('/var/www/html/modules/head.html');
+     echo $head;
+     ?>
   </head>
 
   <body>
+     <?php $nav = file_get_contents('/var/www/html/modules/navigation.html');
+     echo $navigation;
+     ?>
 
     <h1>Thank You for Your Time</h1>
     <h2>Survey Results</h2>
@@ -181,5 +187,11 @@ $fightDum = $decoded['fight']['Dumbledore'];
       </tr>
     </table>    
   </body>
+
+  <footer>
+    <?php $foot = file_get_contents('/var/www/html/modules/footer.html');
+    echo $foot;
+    ?>
+  </footer>
   
 </html>
