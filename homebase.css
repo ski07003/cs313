@@ -1,6 +1,6 @@
 #sky 
 {
-    background: linear-gradient(yellow, orange);
+   // background: linear-gradient(yellow, orange);
    // background-color: #b0c4de;
     width: auto;
     //max-width: 900px;
@@ -18,14 +18,22 @@
     float:left;
 }
 
-body
+html
 {
+   background-color: #033E6B;
+}
+
+body
+{   
+    border-radius: 25px;
+    height: 700px;
     //max-width: 1000px;
     width: auto;
     margin: 3% 100px;
+    padding: 30px;
     //text-align: center;
     //background-color: orange;
-    background: linear-gradient(orange, yellow);
+    background: linear-gradient(#FF9200, #FFC373);
 }
 
 object
@@ -33,8 +41,12 @@ object
     float:right;
 }
 
+
 #navigation ul
-{
+{ 
+   border-radius:5px;
+   float:left;
+   background:#FFC373;
    list-style-type:none;
    margin:0;
    padding:0;
@@ -49,7 +61,7 @@ object
 #navigation a:link, a:visited
 {
    display:block;
-   width:120px;
+   width:140px;
    font-weight:bold;
    color:BLACK;
    text-align:center;
@@ -59,5 +71,5 @@ object
 }
 #navigation a:hover, a:active
 {
-   background-color: RED;
+   background-color: #66A3D2;
 }

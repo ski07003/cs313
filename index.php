@@ -12,6 +12,10 @@
             echo $nav;
              ?>
     </div>
+
+    </br></br>
+    <h2>Sorry this has been changing a lot lately. Content has been misplaced. Stay tuned.</h2>
+
   </body>
 
   <footer>

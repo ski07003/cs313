@@ -69,9 +69,11 @@ $fightDum = $decoded['fight']['Dumbledore'];
   </head>
 
   <body>
-     <?php $nav = file_get_contents('/var/www/html/modules/navigation.html');
-     echo $navigation;
-     ?>
+    <div id="navigation">
+      <?php $nav = file_get_contents('/var/www/html/modules/navigation.html');
+      echo $nav;
+      ?>
+    </div>
 
     <h1>Thank You for Your Time</h1>
     <h2>Survey Results</h2>
