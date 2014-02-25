@@ -12,13 +12,14 @@
             echo $nav;
              ?>
     </div>
-
-    <ul><h3>Assignments</h3>
-      <li><a href="form.php">Form Assignment</a></li>
-      <li><a href="results.php">Survey Results</a></li>
-      <li><a href="query.php">Query</a></li>
-      <li><a href="auth.php">Change</a></li>
-    </ul>
+    <div id="content">
+        <ul><h3>Assignments</h3>
+          <li><a href="form.php">Form Assignment</a></li>
+          <li><a href="results.php">Survey Results</a></li>
+          <li><a href="query.php">Query</a></li>
+          <li><a href="auth.php">Change</a></li>
+        </ul>
+     </div>
   </body>
 
   <footer>

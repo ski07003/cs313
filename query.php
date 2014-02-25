@@ -27,18 +27,18 @@ else
       //echo "Views=". $_SESSION['views'];
 
       ?>
-    <h2>Query:</h2>
     </div>
+    <div id="content">
+        <h2>Query:</h2>
+        <form name="input" action="mysqltest.php" method="get">
+          Select query attributes:</br>
+          <input type="checkbox" name="query[]" value="user">Usernames</br>
+          <input type="checkbox" name="query[]" value="adj">Adjectives</br> 
+          <input type="checkbox" name="query[]" value="noun">Nouns</br>
 
-    <form name="input" action="mysqltest.php" method="get">
-      Select query attributes:</br>
-      <input type="checkbox" name="query[]" value="user">Usernames</br>
-      <input type="checkbox" name="query[]" value="adj">Adjectives</br> 
-      <input type="checkbox" name="query[]" value="noun">Nouns</br>
-
-      <input type="submit" value="Submit">
-    </form>
-
+          <input type="submit" value="Submit">
+        </form>
+    </div>
 
   </body>
 

@@ -1,26 +1,6 @@
-#sky 
-{
-   // background: linear-gradient(yellow, orange);
-   // background-color: #b0c4de;
-    width: auto;
-    //max-width: 900px;
-    height: 350px;
-}
-
-#land
-{
-    background-color: YELLOW;
-    width: auto;
-    height: 500px;
-}
-#sun
-{
-    float:left;
-}
-
 html
 {
-   background-color: #033E6B;
+   background-color: #62868D; /*#033E6B;*/
 }
 
 body
@@ -28,12 +8,13 @@ body
     border-radius: 25px;
     height: 1000pxc;
     //max-width: 1000px;
+    min-width: 860px;
     width: auto;
     margin: 3% 100px;
     padding: 30px;
     //text-align: center;
     //background-color: orange;
-    background: linear-gradient(#FF9200, #FFC373);
+    background: #CFC8B5;/*linear-gradient(#FF9200, #FFC373);*/
 }
 
 object
@@ -41,35 +22,67 @@ object
     float:right;
 }
 
-
-#navigation ul
-{ 
-   border-radius:5px;
-   float:left;
-   background:#FFC373;
-   list-style-type:none;
-   margin:0;
-   padding:0;
-   overflow:hidden;
+#content {
+    border-radius: 25px;
+    background: none repeat scroll 0 0 #F9F3E3;
+    box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.2);
+    margin: 20px 20px;
+    overflow: hidden;
+    width: 60%;
+    width: 730px;
+    padding: 0px 40px 20px 40px;
 }
 
-#navigation li
-{
-    float:left;
+#navigation {
+    border-radius: 25px;
+    background: none repeat scroll 0 0 #F9F3E3;
+    box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.2);
+    margin: 20px 20px;
+    overflow: hidden;
+    width: 60%;
+    min-width: 800px;
 }
 
-#navigation a:link, a:visited
-{
-   display:block;
-   width:140px;
-   font-weight:bold;
-   color:BLACK;
-   text-align:center;
-   padding:4px;
-   text-decoration:none;
-   text-transform:uppercase;
+#navigation ul {
+    padding: 15px 5px;
 }
-#navigation a:hover, a:active
-{
-   background-color: #66A3D2;
+
+#navigation li {
+    border-radius: 25px;
+    border-left: 9px solid #62868D;
+    border-right: 9px solid #62868D;
+    cursor: pointer;
+    float: left;
+    list-style-type: none;
+    padding: 10px 50px 10px 15px;
+    transition: all 0.3s ease-in 0s;
 }
+#navigation li h2 {
+    font-family: 'Varela Round', sans-seref;/*georgia;*/
+    font-size: 30px;
+    font-style: italic;
+    font-weight: normal;
+    line-height: 1px;
+    margin-bottom: 15px;
+}
+#navigation li p {
+    color: #999999;
+    font-size: 11px;
+    transition: all 0.1s ease-in 0s;
+}
+#navigation li:hover {
+    background: none repeat scroll 0 0 #263C40;
+    border-left: 5px solid #9A7A88;
+    border-right: 5px solid #9A7A88;
+}
+#navigation li:hover h2 {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+#navigation li:hover p {
+    color: #CCCCCC;
+    padding-left: 5px;
+}
+
+
+

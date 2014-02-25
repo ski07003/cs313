@@ -23,8 +23,9 @@ if(!isset($_SESSION['user']))      // if there is no valid session
              ?>
     </div>
 
-    <h2>Update Database</h2>
+    
     <div id="content">
+        <h2>Update Database</h2>
       <ul>
         <li><a href="adduser.php">Add New User</a></li>
         <li><a href="addword.php">Add New Word</a></li>

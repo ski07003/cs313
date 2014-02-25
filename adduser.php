@@ -23,8 +23,9 @@ if(!isset($_SESSION['user']))      // if there is no valid session
              ?>
     </div>
 
-    <h2>Add Word to Database</h2>
+    
     <div id="content">
+      <h2>Add Word to Database</h2>
       <form name="input" action="adduserproc.php" method="post">
         Username:<input type="text" name="username"><br/>
         Password:<input type="password" name="password"><br/>
